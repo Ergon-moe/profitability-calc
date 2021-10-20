@@ -45,11 +45,11 @@ blocks_a_day = ths_work/current_work
 reward_per_day = blocks_a_day*current_reward
 xrg_per_day=reward_per_day/10**5
 
-print("we are at the height of: ", height)
-print("difficulty is: ", block_diff(current_block))
-print("# of hashes to find a block: ", current_work)
-print("the reward is: ", current_reward, 'fix')
-print(f"1Ths would find {blocks_a_day:.0f} block a day earning {reward_per_day:.0f}fix" )
-print(f"{reward_per_day:.0f}fix is {xrg_per_day:.5f}mXRG")
+print("we are at the height of: ", height,'<BR>')
+print("difficulty is: ", block_diff(current_block),'<BR>')
+print("# of hashes to find a block: ", current_work,'<BR>')
+print("the reward is: ", current_reward, 'fix','<BR>')
+print(f"1Ths would find {blocks_a_day:.0f} block a day earning {reward_per_day:.0f}fix" ,'<BR>')
+print(f"{reward_per_day:.0f}fix is {xrg_per_day:.5f}mXRG",'<BR>')
 
 
