@@ -23,7 +23,10 @@ def block_reward(block):
     tx_hash = block['tx'][0]
     r = requests.get(url+'getrawtransaction?txid='+tx_hash+'&decrypt=1')
     tx = r.json()
-    return tx['vout'][0]['value']*10**8
+    total_value=0
+    for v in tx['vout']:
+        total_value+=v['value']
+    return total_value*10**8
 
 def parse_bits_string(bits):
     exp = int('0x'+bits[0:2],16)
@@ -46,7 +49,7 @@ print("we are at the height of: ", height)
 print("difficulty is: ", block_diff(current_block))
 print("# of hashes to find a block: ", current_work)
 print("the reward is: ", current_reward, 'fix')
-print(f"1Ths would find {blocks_a_day} block a day earning {reward_per_day}fix" )
-print(f"{reward_per_day}fix is {xrg_per_day}XRG")
+print(f"1Ths would find {blocks_a_day:.0f} block a day earning {reward_per_day:.0f}fix" )
+print(f"{reward_per_day:.0f}fix is {xrg_per_day:.5f}mXRG")
 
 
