@@ -30,7 +30,7 @@ def block_reward(block):
 
 def parse_bits_string(bits):
     exp = int('0x'+bits[0:2],16)
-    sigd = int('0x'+bits[3:],16)
+    sigd = int('0x'+bits[2:],16)
     return exp, sigd
 
 height = block_count()
