@@ -1,4 +1,4 @@
-#! /bin/python
+#! /bin/python3
 import requests
 from diff_to_work import target_from_nbits, work
 
